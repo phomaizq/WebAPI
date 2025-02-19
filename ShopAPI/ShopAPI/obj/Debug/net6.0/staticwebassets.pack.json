@@ -2,7 +2,11 @@
   "Files": [
     {
       "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ShopAPI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\ShopAPI.iwl15m5669.bundle.scp.css"
+      "PackagePath": "staticwebassets\\ShopAPI.no0qy94xn9.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\backend\\js\\site.js",
+      "PackagePath": "staticwebassets\\backend\\js\\site.js"
     },
     {
       "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\css\\animate.css",
@@ -271,6 +275,42 @@
     {
       "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\images\\shop\\product9.jpg",
       "PackagePath": "staticwebassets\\images\\shop\\product9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\images\\upload\\19894aac-10a6-4268-ad9a-3cbaa915df86.jpg",
+      "PackagePath": "staticwebassets\\images\\upload\\19894aac-10a6-4268-ad9a-3cbaa915df86.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\images\\upload\\1f77e391-edbb-48b7-bd79-248c6e92c3ee.png",
+      "PackagePath": "staticwebassets\\images\\upload\\1f77e391-edbb-48b7-bd79-248c6e92c3ee.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\images\\upload\\354d3829-c42e-423b-9c93-8823f65391f3.jpg",
+      "PackagePath": "staticwebassets\\images\\upload\\354d3829-c42e-423b-9c93-8823f65391f3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\images\\upload\\4b457cde-5c3f-4fb1-ab16-2d2a849920a4.png",
+      "PackagePath": "staticwebassets\\images\\upload\\4b457cde-5c3f-4fb1-ab16-2d2a849920a4.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\images\\upload\\506bd383-665e-48c0-a7dd-14c2ba2f26ba.png",
+      "PackagePath": "staticwebassets\\images\\upload\\506bd383-665e-48c0-a7dd-14c2ba2f26ba.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\images\\upload\\7e837e3a-6fda-4630-9e86-bd7c47aa3167.jpg",
+      "PackagePath": "staticwebassets\\images\\upload\\7e837e3a-6fda-4630-9e86-bd7c47aa3167.jpg"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\images\\upload\\a6abc2ac-837e-477e-8497-638945792b2c.png",
+      "PackagePath": "staticwebassets\\images\\upload\\a6abc2ac-837e-477e-8497-638945792b2c.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\images\\upload\\da29ff9b-5c15-4d58-a5f5-3a24541fad4e.png",
+      "PackagePath": "staticwebassets\\images\\upload\\da29ff9b-5c15-4d58-a5f5-3a24541fad4e.png"
+    },
+    {
+      "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\images\\upload\\f5a4d9a6-fe07-45ff-90b3-f65aba3823bb.jpg",
+      "PackagePath": "staticwebassets\\images\\upload\\f5a4d9a6-fe07-45ff-90b3-f65aba3823bb.jpg"
     },
     {
       "Id": "C:\\Users\\hp\\Desktop\\C#\\ShopAPi\\ShopAPI\\ShopAPI\\wwwroot\\js\\bootstrap.min.js",

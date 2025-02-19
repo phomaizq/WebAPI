@@ -1,3 +1,4 @@
+wwwroot\backend\js\site.js
 wwwroot\css\animate.css
 wwwroot\css\bootstrap.min.css
 wwwroot\css\font-awesome.min.css
@@ -65,6 +66,15 @@ wwwroot\images\shop\product12.jpg
 wwwroot\images\shop\product7.jpg
 wwwroot\images\shop\product8.jpg
 wwwroot\images\shop\product9.jpg
+wwwroot\images\upload\19894aac-10a6-4268-ad9a-3cbaa915df86.jpg
+wwwroot\images\upload\1f77e391-edbb-48b7-bd79-248c6e92c3ee.png
+wwwroot\images\upload\354d3829-c42e-423b-9c93-8823f65391f3.jpg
+wwwroot\images\upload\4b457cde-5c3f-4fb1-ab16-2d2a849920a4.png
+wwwroot\images\upload\506bd383-665e-48c0-a7dd-14c2ba2f26ba.png
+wwwroot\images\upload\7e837e3a-6fda-4630-9e86-bd7c47aa3167.jpg
+wwwroot\images\upload\a6abc2ac-837e-477e-8497-638945792b2c.png
+wwwroot\images\upload\da29ff9b-5c15-4d58-a5f5-3a24541fad4e.png
+wwwroot\images\upload\f5a4d9a6-fe07-45ff-90b3-f65aba3823bb.jpg
 wwwroot\js\bootstrap.min.js
 wwwroot\js\contact.js
 wwwroot\js\gmaps.js

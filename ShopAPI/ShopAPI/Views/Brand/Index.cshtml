@@ -14,11 +14,15 @@
 					<a>
 						<div class="single-products">
 							<div class="productinfo text-center">
-								<img src="~/images/@item.Image" width="100%" />
+								<img src="~/images/upload/@item.Image" width="100%" />
 								<h2>@item.Price</h2>
 								<p>Danh mục : @item.Category.Name</p>
 								<p>Thương hiệu : @item.Brand.Name</p>
-								<a class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+								<a asp-action="Add" asp-controller="Cart" asp-route-id="@item.Id" class="btn btn-default add-to-cart">
+									Add to Cart
+								</a>
+
+
 							</div>
 
 						</div>

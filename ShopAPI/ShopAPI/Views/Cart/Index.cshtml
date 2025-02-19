@@ -29,7 +29,7 @@
                             <tr>
                                 <td class="cart_product">
                                     <a href="#">
-                                        <img src="~/images/@item.Image" alt="@item.ProductName" />
+                                        <img src="~/images/upload/@item.Image" alt="@item.ProductName" />
                                     </a>
                                 </td>
                                 <td class="cart_description">
@@ -39,30 +39,37 @@
                                     <p>@item.Price</p>
                                 </td>
                                 <td class="cart_quantity">
-                                                    <a class="btn btn-default btn-sm" asp-action="Increase" asp-controller="Cart" asp-route-id="@item.ProductId">+</a>
+                                    <a class="btn btn-default btn-sm" asp-action="Increase" asp-controller="Cart" asp-route-id="@item.ProductId">+</a>
                                     <input class="cart_quantity_input" type="text" name="quantity" value="@item.Quantity" autocomplete="off" size="2" readonly />
-                                                    <a class="btn btn-default btn-sm" asp-action="Decrease" asp-controller="Cart" asp-route-id="@item.ProductId">-</a>
+                                    <a class="btn btn-default btn-sm" asp-action="Decrease" asp-controller="Cart" asp-route-id="@item.ProductId">-</a>
                                 </td>
+
                                 <td class="cart_total">
                                     <p class="cart_total_price">
                                         @(item.Quantity * item.Price)
                                     </p>
                                 </td>
-                                <td class="cart_delete">
-                                    <a class="btn btn-danger btn-sm" asp-action="Remove" asp-controller="Cart" asp-route-id="@item.ProductId">
-                                        <i class="fa fa-times"></i> Delete
-                                    </a>
+                                <td class="cart_quantity">
+                                    <a class="btn btn-danger btn-sm" asp-action="Remove" asp-controller="Cart" asp-route-id="@item.ProductId">Delete</a>
                                 </td>
                             </tr>
+                     
                         }
+                    <td colspan="5" class="text-right">
+                        <a class="btn btn-danger btn-sm" asp-controller="Cart" asp-action="Clear">Clear</a>
+                    </td>
+                   
                         <tr>
                             <td colspan="5" class="text-right">
                                 <h4>Grand Total:</h4>
                             </td>
+                           
                             <td>
                                 <h4>@Model.GrandTotal</h4>
                             </td>
                         </tr>
+                   
+                  
                     }
                     else
                     {

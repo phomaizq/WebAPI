@@ -2,7 +2,7 @@
 using ShopAPI.Models;
 using ShopAPI.Models.ViewModels;
 using ShopAPI.Repository;
-using System.ComponentModel.Design;
+
 
 namespace ShopAPI.Controllers
 {
@@ -50,28 +50,85 @@ namespace ShopAPI.Controllers
 		}
 		public async Task<IActionResult> Decrease(int id)
 		{
-			List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
+			// Retrieve the cart from the session
+			List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
 
-			CartItemModel cartItem = cart.Where(x => x.ProductId == id).FirstOrDefault();
-			if (cartItem.Quantity > 1)
+			// Find the item to decrease
+			var cartItem = cart.FirstOrDefault(x => x.ProductId == id);
+
+			if (cartItem != null)
 			{
-				--cartItem.Quantity;
+				if (cartItem.Quantity >= 1)
+				{
+					// Decrease the quantity
+					cartItem.Quantity--;
+				}
+				else
+				{
+					// Remove the item if quantity is 1
+					cart.RemoveAll(x => x.ProductId == id);
+				}
 			}
-			else
-			{
-				cart.RemoveAll(p => p.ProductId == id);
-			}
-			if(cart.Count == 0)
+
+			// Update or clear the cart in the session
+			if (cart.Count == 0)
 			{
 				HttpContext.Session.Remove("Cart");
-			}else
+			}
+			else
 			{
 				HttpContext.Session.SetJson("Cart", cart);
 			}
 
+			// Redirect back to the referring page
+			return Redirect(Request.Headers["Referer"].ToString());
+		}
+		public async Task<IActionResult> Increase(int id)
+		{
+
+			// Retrieve the cart from the session
+			List<CartItemModel> cart = HttpContext.Session.GetJson<List<CartItemModel>>("Cart") ?? new List<CartItemModel>();
+
+			// Find the item to increase
+			var cartItem = cart.FirstOrDefault(x => x.ProductId == id);
+
+			if (cartItem != null)
+			{
+				// Increase the quantity
+				cartItem.Quantity++;
+			}
+
+			// Update the cart in the session
+			HttpContext.Session.SetJson("Cart", cart);
+
+			// Redirect back to the referring page
+			return Redirect(Request.Headers["Referer"].ToString());
+		}
+		public async Task<IActionResult> Remove(int id)
+		{
+
+			List<CartItemModel> carts = HttpContext.Session.GetJson<List<CartItemModel>>("Cart");
+			CartItemModel cartItem = carts.Where(c => c.ProductId == id).FirstOrDefault();
+
+			carts.RemoveAll(c => c.ProductId == id);
+
+			if (carts.Count == 0)
+			{
+				HttpContext.Session.Remove("Cart");
+			}
+			else
+			{
+				HttpContext.Session.SetJson("Cart", carts);
+			}
+			return Redirect(Request.Headers["Referer"].ToString());
+		}
+		public async Task<IActionResult> Clear()
+		{
+			HttpContext.Session.Remove("Cart");
+
+			// Redirect back to the referring page
 			return RedirectToAction("Index");
 		}
-
 	}
 
 }

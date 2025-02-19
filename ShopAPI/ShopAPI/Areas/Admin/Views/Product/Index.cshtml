@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProductModel>
+@{
+    ViewData["title"] = "Product Listed";
+}
+<a asp-action="Create" asp-controller="Product"> Add</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Description</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Product Image</th>
+            <th scope="col">Product Slug</th>
+            <th scope="col">Product Category</th>
+            <th scope="col">Product Brand</th>
+            <th scope="col">Product Manager</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.Id</th>
+                <th>@item.Name</th>
+                <td>@item.Description</td>
+                <td>@item.Price</td>
+                <td><img src="~/images/upload/@item.Image" width="120"></td>
+                <td>@item.Slug</td>
+                <td>@item.Category.Name</td>
+                <td>@item.Brand.Name</td>
+                <td>
+                    <a asp-action="Edit" class="btn btn-warning btn-sm" asp-controller="Product" asp-route-Id="@item.Id"> Edit</a>
+                    <form asp-action="Delete" asp-controller="Product" method="post" onsubmit="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm confirmDeletion">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
